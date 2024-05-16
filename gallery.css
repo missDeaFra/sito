@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.center{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+html, body {
+    height: 100%; /* Imposta l'altezza di html e body al 100% della finestra del browser */
+    margin: 0; /* Rimuove il margine predefinito */
+    padding: 0; /* Rimuove il padding predefinito */
+}
+body {
+    background-image: url('img9.jpeg'); /* Sostituisci 'background.jpg' con il percorso dell'immagine di sfondo */
+    background-size: cover; /* Copri l'intera area della pagina */
+    background-position: center; /* Posiziona l'immagine al centro della pagina */
+    background-repeat: no-repeat; /* Non ripetere l'immagine di sfondo */
+}
+
+
+.title {
+    border: solid red 2px;
+
+    width: 100%;
+}
+
+
+.slider{
+    /* border: solid red 2px; */
+    height: 100vh;
+}
+.slider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.slider img{
+    /* border: solid rgb(255, 255, 255) 2px; */
+    width: 600px;
+
+}
+

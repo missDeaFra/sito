@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--icon-->
+  <link rel="shortcut icon" href="img9.jpeg">
+  <title>Ruota della Fortuna</title>
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .center{ 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    body{height: 100vh; width: 100vw;}
+    body {
+      background-image: url('img8.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      width: 50vw;
+    }
+
+    .wheel {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 2px solid black;
+      position: absolute;
+      position: fixed;
+      transform: rotate(0deg);
+      transition: transform 3s ease-out;
+    }
+
+    .section {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      clip-path: polygon(0% 0%, 50% 50%, 0% 64%);
+    }
+
+    .section:nth-child(1) {
+      background-color: #302522;
+      transform: rotate(0deg);
+    }
+
+    .section:nth-child(2) {
+      background-color: #C70039;
+      transform: rotate(60deg);
+    }
+
+    .section:nth-child(3) {
+      background-color: #900C3F;
+      transform: rotate(120deg);
+    }
+
+    .section:nth-child(4) {
+      background-color: #581845;
+      transform: rotate(180deg);
+    }
+
+    .section:nth-child(5) {
+      background-color: #1A5276;
+      transform: rotate(240deg);
+    }
+
+    .section:nth-child(6) {
+      background-color: #0E6655;
+      transform: rotate(300deg);
+    }
+
+    .section:nth-child(7) {
+      background-color: #FF5733;
+      transform: rotate(360deg);
+    }
+
+    .section:nth-child(8) {
+      background-color: #FFC300;
+      transform: rotate(420deg);
+    }
+
+    .section:nth-child(9) {
+      background-color: #C70039;
+      transform: rotate(480deg);
+    }
+
+    .section:nth-child(10) {
+      background-color: #900C3F;
+      transform: rotate(540deg);
+    }
+
+    .section:nth-child(11) {
+      background-color: #581845;
+      transform: rotate(600deg);
+    }
+
+    .section:nth-child(12) {
+      background-color: #1A5276;
+      transform: rotate(660deg);
+    }
+
+    .section:nth-child(13) {
+      background-color: #0E6655;
+      transform: rotate(720deg);
+    }
+
+    .section:nth-child(14) {
+      background-color: #8B4513;
+      transform: rotate(780deg);
+    }
+
+    .section:nth-child(15) {
+      background-color: #FF5733;
+      transform: rotate(840deg);
+    }
+
+    #spin {
+        position: absolute;
+        left: 20px;
+        background-color: rgb(231, 231, 231);
+        border-radius: 10%;
+        top: 200px;
+
+        margin-top: 0px;
+        padding: 10px 20px;
+        font-size: 15px;
+        border: rgba(255, 255, 255, 0);
+    }
+
+    .spillo {
+        background-color: #8b8b8b;
+        border: black;
+        position: relative;
+        left: -140px;
+        width: 50px;
+        height: 20px;
+        clip-path: polygon(0% 0%, 50% 35%, 0% 90%);
+        z-index: 1;
+    }
+
+    .in-wheel {
+        font-size: 10px;
+        position: absolute;
+        color: #ffffff;
+        top:130px;
+        left: 40px;
+        z-index: 3;
+    }
+  </style>
+</head>
+
+<body class="center">
+    <button id="spin"  onclick="spinWheel()">Spin <h1 class="cown">0</h1> <h9 class="ip">0</h9><h9> Totali<br> in questo <br> dispositivo</h9></button>
+  <div class="container">
+      <div class="spillo center"></div>
+    <div class="wheel">
+      <div id="s7" class="section"><h1 class="in-wheel">Versa 5</h1></div>
+      <div id="s8" class="section"><h1 class="in-wheel">Versa 10</h1></div>
+      <div id="s9" class="section"><h1 class="in-wheel">Versa 15</h1></div>
+      <div id="s10" class="section"><h1 class="in-wheel">Versa 20</h1></div>
+      <div id="s11" class="section"><h1 class="in-wheel">Ginocchio 30 min <br> +5€</h1></div>
+      <div id="s12" class="section"><h1 class="in-wheel">Lecca WC</h1></div>
+      <div id="s13" class="section"><h1 class="in-wheel">30 colpi <br> buldbusting</h1></div>
+      <div id="s14" class="section"><h1 class="in-wheel">2 foto</h1></div>
+      <div id="s15" class="section"><h1 class="in-wheel">1 video</h1></div>
+      <div id="s15" class="section"><h1 class="in-wheel">Lecca scarpe</h1></div>
+      <div id="s15" class="section"><h1 class="in-wheel">Lecca piedi</h1></div>
+    </div>
+  </div>
+  
+  <script>
+    var count = 0;
+    var initialIPElement = document.querySelector('.ip');
+  
+    // Leggi il valore di initialIP dall'elemento con classe ip
+    var initialIP = parseInt(initialIPElement.textContent) || 0;
+  
+    function spinWheel() {
+      var wheel = document.querySelector('.wheel');
+      var randomDegree = Math.floor(Math.random() * 360) + 2000;
+      wheel.style.transform = `rotate(${randomDegree}deg)`;
+  
+      count++;
+      initialIP++;
+  
+      var cown = document.querySelector('.cown');
+      cown.textContent = count;
+  
+      initialIPElement.textContent = initialIP; // Aggiorna il valore nella classe ip
+  
+      // Salva il valore di initialIP in localStorage
+      localStorage.setItem("initialIP", initialIP); // Salva il valore in localStorage
+    }
+  
+    // Leggi il valore di initialIP da localStorage quando la pagina viene caricata
+    window.onload = function() {
+      var savedInitialIP = localStorage.getItem("initialIP");
+      if (savedInitialIP !== null) {
+        initialIP = parseInt(savedInitialIP);
+        initialIPElement.textContent = initialIP; // Aggiorna il valore nella classe ip
+      }
+    };
+  </script>
+  
+</body>
+</html>

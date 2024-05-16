@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+#bg{
+    height: 110vh;
+    width: 100vw;
+    opacity: 80%;
+
+    position: fixed;
+    object-fit: cover;
+
+    z-index: -1;
+}
+
+.center{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.center-x { 
+    display: flex;
+    flex-direction: column; /* Imposta la direzione dei flex items su colonna */
+    align-items: center;
+    /* justify-content: center; */
+    text-align: center;
+}
+
+
+
+.title {
+        /* border: solid red 2px; */
+    position: relative;
+    top: 100px;
+     width: 96vw;
+     height: 50px;
+    
+    font-size: 30px;
+    color: rgb(224, 0, 224);
+    text-shadow: 0px 0px 10px #cf00e24b;
+}
+.cont {
+    /* border: solid red 2px; */
+    position: relative;
+     width: 96vw;
+     height: 50px;
+}
+
+section {
+    /* border: solid red 2px; */
+    /* border: solid red 2px; */
+
+    width: 99%;
+    height: auto;
+    position: relative;
+    top: 200px;
+
+    /* border: solid red 2px; */
+}
+/* .card .cont, .card .cont .title{border: solid red 2px;} */
+
+.card{
+    /* border: solid rgb(58, 255, 8) 2px; */
+    width: 80vw;
+    max-width: 700px;
+    height: 140px;
+
+    display: flex;
+
+    background-color: rgba(0, 0, 0, 0.411);
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.card img{
+    width: 100px;
+    height: 100px;
+}
+.card .img{
+    /* margin-left: 40px; */
+    width: 100px;
+    height: 100px;
+    border: solid rgb(0, 0, 0) 2px;
+    background-color: white;
+    border-radius: 50%;
+}
+.card .cont{
+    /* border: solid red 2px; */
+    width: 60%;
+    height: 100%;
+}
+.card .cont .c_ci { 
+    margin-top: 20px;
+    height: 60%;
+    font-size: 20px;
+}
+.card .cont .c_ci  h1{ 
+    color: white;
+    height: 50%;
+}
+.card .cont .c_ci  h4 a{ 
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.card .title h1{ position: absolute;}
+
+.footer h1 a{
+    text-shadow: 2px 2px 20px #000000;
+    transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+}
+.footer h1 a:hover{
+    text-shadow: 2px 2px 20px #979797;
+    color: #a200ff;
+    transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+}
+.footer, .footer h1 a{
+    /* border: solid red 2px; */
+    margin-top: 10px;
+    height: 150px;
+    text-decoration: none;
+    color: white;
+}
+
