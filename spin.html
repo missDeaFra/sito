@@ -163,10 +163,27 @@
         left: 40px;
         z-index: 3;
     }
+
+    a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-shadow: 2px 2px 20px #000000;
+    transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+    font-size: 15px;
+  }
+  a:hover{
+    text-shadow: 2px 2px 20px #979797;
+    color: #a200ff;
+    transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+  }
   </style>
 </head>
 
 <body class="center">
+
+  <h1 class="center" style="width: 100%; position: absolute; top: 100px; "><a href="index.html">Torna indietro</a></h1>
+
+
     <button id="spin"  onclick="spinWheel()">Spin <h1 class="cown">0</h1> <h9 class="ip">0</h9><h9> Totali<br> in questo <br> dispositivo</h9></button>
   <div class="container">
       <div class="spillo center"></div>
